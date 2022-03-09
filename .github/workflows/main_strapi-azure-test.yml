@@ -58,5 +58,4 @@ jobs:
           app-name: 'Strapi-Azure-Test'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C7B3F0C982B549AF823307F55B66B6C9 }}
-          package: .
-          startup-command: yarn start
+          package: .     
