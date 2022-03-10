@@ -1,20 +1,13 @@
-const path = require('path');
-
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
-  connections: {
-    default: {
-      connector: 'bookshelf',
-      settings: {
-        client: 'mysql',
-        host: env('DATABASE_HOST', 'my-strapi-db-mo.mysql.database.azure.com'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi'),
-        username: env('DATABASE_USERNAME', 'makhan@my-strapi-db-mo.mysql.database.azure.com'),
-        password: env('DATABASE_PASSWORD', 'March2022'),
-        ssl: env.bool('DATABASE_SSL', true),
-      },
-      options: {},
+  connection: {
+    client: 'mysql',
+    connection: {
+        host: 'my-strapi-db-mo.mysql.database.azure.com',       
+        database: 'strapi',
+        port: '3306',
+        user: 'makhan@my-strapi-db-mo.mysql.database.azure.com',
+        password: 'March2022'        
     },
+    debug:true,
   },
-})
+});
